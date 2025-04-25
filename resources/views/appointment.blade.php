@@ -514,6 +514,9 @@
                             <form action="https://api.web3forms.com/submit" method="POST" id="appointment-form">
                                 <input type="hidden" name="access_key" value="02dfdeed-b3c6-4426-8cf6-786cd95480e3">
                                 <input type="hidden" name="apikey" value="02dfdeed-b3c6-4426-8cf6-786cd95480e3">
+                                <input type="hidden" name="subject" value="New Dental Appointment Booking">
+                                <input type="hidden" name="from_name" value="Laravel">
+                                <input type="checkbox" name="botcheck" style="display: none;">
                                 
                                 <!-- Section 1: Personal Information -->
                                 <div class="form-section active" id="section-1">
