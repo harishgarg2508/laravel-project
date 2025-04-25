@@ -511,7 +511,8 @@
                             </div>
                         </div>
                         
-                        <form id="appointment-form">
+                        <form action="https://api.web3forms.com/submit" method="POST" id="appointment-form">
+                            <input type="hidden" name="access_key" value="02dfdeed-b3c6-4426-8cf6-786cd95480e3">
                             <!-- Section 1: Personal Information -->
                             <div class="form-section active" id="section-1">
                                 <h4 class="mb-4 slide-in-left">Personal Information</h4>
