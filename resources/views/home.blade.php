@@ -981,7 +981,7 @@
         <div class="container">
             <div class="about-content">
                 <div class="about-img">
-                    <img src="https://www.sunrisedental.in/assets/cleaning.jpg" alt="Dental Team">
+                    <img src="https://github.com/harishgarg2508/dental-clinic-website/blob/main/public/assets/john.jpg?raw=true" alt="Dental Team">
                 </div>
                 <div class="about-text">
                     <h2>Expert Care For Your Smile</h2>
