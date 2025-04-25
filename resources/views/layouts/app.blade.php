@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Bright Smile Dental</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- important for mobile -->
     <style>
         :root {
             --primary: #4cc9f0;
@@ -24,6 +25,7 @@
             color: var(--dark);
             overflow-x: hidden;
         }
+
         .appointment-btn {
             background-color: white;
             color: var(--secondary);
@@ -33,14 +35,16 @@
             transition: all 0.3s ease;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             animation: pulse 2s infinite;
+            white-space: nowrap;
         }
-        
+
         .appointment-btn:hover {
             transform: translateY(-3px);
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
             background-color: var(--accent);
             color: white;
         }
+
         header {
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             padding: 1rem 0;
@@ -82,16 +86,30 @@
             animation: pulse 3s infinite;
         }
 
-        nav ul {
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-toggle {
+            display: none;
+            font-size: 1.8rem;
+            color: white;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        ul.nav-links {
             display: flex;
             list-style: none;
         }
 
-        nav ul li {
+        ul.nav-links li {
             margin-left: 1.5rem;
         }
 
-        nav ul li a {
+        ul.nav-links li a {
             color: white;
             text-decoration: none;
             font-weight: 500;
@@ -100,9 +118,10 @@
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
+            display: inline-block;
         }
 
-        nav ul li a:before {
+        ul.nav-links li a:before {
             content: '';
             position: absolute;
             bottom: 0;
@@ -113,8 +132,36 @@
             transition: width 0.3s ease;
         }
 
-        nav ul li a:hover:before {
+        ul.nav-links li a:hover:before {
             width: 100%;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .nav-toggle {
+                display: block;
+            }
+
+            ul.nav-links {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--secondary);
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+                padding: 1rem 0;
+                display: none;
+            }
+
+            ul.nav-links.active {
+                display: flex;
+            }
+
+            ul.nav-links li {
+                margin-left: 0;
+            }
         }
     </style>
 </head>
@@ -126,12 +173,12 @@
                 <span class="logo-icon">🦷</span>
                 <span class="logo-text">Sunrise Dental</span>
             </a>
+            <button class="nav-toggle" onclick="toggleMenu()">☰</button>
             <nav>
-                <ul>
+                <ul class="nav-links" id="navLinks">
                     <li><a href="{{ route('home') }}">Home</a></li>
                     <li><a href="{{ route('services') }}">Services</a></li>
                     <li><a href="{{ route('about') }}">About Us</a></li>
-                    {{-- <li><a href="#testimonials">Testimonials</a></li> --}}
                     <li><a href="{{ route('contact') }}">Contact</a></li>
                     <li><a href="{{ route('appointment.form') }}" class="appointment-btn">Book Appointment</a></li>
                 </ul>
@@ -140,8 +187,14 @@
     </header>
 
     {{-- Main Content --}}
-    <main>
+    <main style="margin-top: 100px;">
         @yield('content')
     </main>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
