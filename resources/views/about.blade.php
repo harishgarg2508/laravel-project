@@ -339,7 +339,7 @@
         <div class="profile-container">
             <div class="profile-image">
                 <div class="profile-image-frame">
-                    <img src="https://www.sunrisedental.in/assets/suraj.png" alt="Dr. Suraj Sharma" style="width: 100%; height: 100%; object-fit: cover;">
+                    <img src="https://github.com/harishgarg2508/dental-clinic-website/blob/main/public/assets/suraj.png?raw=true" alt="Dr. Suraj Sharma" style="width: 100%; height: 100%; object-fit: cover;">
                 </div>
             </div>
             <div class="profile-info">
