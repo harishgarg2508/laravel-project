@@ -27,8 +27,8 @@
         }
 
         .appointment-btn {
-            background-color: white;
-            color: var(--secondary);
+            background-color: blue;
+            color: black;
             padding: 0.6rem 1.2rem;
             border-radius: 30px;
             font-weight: bold;
@@ -153,6 +153,7 @@
                 gap: 1rem;
                 padding: 1rem 0;
                 display: none;
+                color:black;
             }
 
             ul.nav-links.active {
