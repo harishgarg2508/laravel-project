@@ -642,11 +642,11 @@
                                     </div>
                                 </div>
                                 
-                               <!-- Section 4: Confirmation -->
+                                <!-- Section 4: Confirmation -->
                                 <div class="form-section" id="section-4">
                                     <h4 class="mb-4">Confirm Your Appointment</h4>
                                     
-                                    <div class="summary-container p-4 bg-light rounded mb-4">
+                                    <!-- <div class="summary-container p-4 bg-light rounded mb-4">
                                         <div class="summary-item">
                                             <span class="summary-label">Name:</span>
                                             <span id="summary-name"></span>
@@ -675,26 +675,8 @@
                                             <span class="summary-label">Additional Info:</span>
                                             <span id="summary-message"></span>
                                         </div> 
-                                    </div>
+                                    </div> -->
                                     
-                                    <div class="form-check mb-4">
-                                        <label class="custom-checkbox">
-                                            I confirm that the given information is correct
-                                            <input type="checkbox" id="confirm-info" required>
-                                            <span class="checkmark"></span>
-                                        </label>
-                                    </div>
-                                    
-                                    <div class="nav-buttons">
-                                        <button type="button" class="btn btn-prev prev-btn" data-prev="3">
-                                            <i class="fas fa-arrow-left me-2"></i> Back
-                                        </button>
-                                        <button type="submit" class="btn btn-submit">
-                                            <i class="fas fa-calendar-check me-2"></i> Schedule Appointment
-                                        </button>
-                                    </div>
-                                </div>
-                                                                    
                                     <div class="form-check mb-4">
                                         <label class="custom-checkbox">
                                             I confirm that the given information is correct
